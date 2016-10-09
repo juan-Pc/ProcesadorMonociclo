@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Juan/Documents/GitHub/MonocicloProcesador/ProcesadorMonociclo/nPC.xst" -ofn "C:/Users/Juan/Documents/GitHub/MonocicloProcesador/ProcesadorMonociclo/nPC.syr" 
