@@ -55,9 +55,9 @@ architecture arqInstructionMemory of instructionMemory is
 				temp_mem(i) := to_stdlogicvector(temp_bv);
 			end loop;
 		return temp_mem;
-	end function;
+	end function;     
 	
-	signal instructions : rom_type := InitRomFromFile("testJMPL.data");
+	signal instructions : rom_type := InitRomFromFile("instrucciones.data");
 	
 begin
 --reset,address, instructions)

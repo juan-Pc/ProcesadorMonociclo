@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   19:27:58 10/10/2016
+-- Create Date:   19:28:46 10/11/2016
 -- Design Name:   
 -- Module Name:   C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/IMTB.vhd
 -- Project Name:  ProcesadorMonociclo
@@ -25,49 +25,64 @@
 -- to guarantee that the testbench will bind correctly to the post-implementation 
 -- simulation model.
 --------------------------------------------------------------------------------
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use std.textio.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ 
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--USE ieee.numeric_std.ALL;
+ 
+ENTITY IMTB IS
+END IMTB;
+ 
+ARCHITECTURE behavior OF IMTB IS 
+ 
+    -- Component Declaration for the Unit Under Test (UUT)
+ 
+    COMPONENT instructionMemory
+    PORT(
+         address : IN  std_logic_vector(31 downto 0);
+         reset : IN  std_logic;
+         outInstruction : OUT  std_logic_vector(31 downto 0)
+        );
+    END COMPONENT;
+    
 
-entity instructionMemory is
-    Port ( 
-			  --clk : in STD_LOGIC;
-			  address : in  STD_LOGIC_VECTOR (31 downto 0);
-           reset : in  STD_LOGIC;
-           outInstruction : out  STD_LOGIC_VECTOR (31 downto 0));
-end instructionMemory;
+   --Inputs
+   signal address : std_logic_vector(31 downto 0) := (others => '0');
+   signal reset : std_logic := '0';
 
-architecture arqInstructionMemory of instructionMemory is
+ 	--Outputs
+   signal outInstruction : std_logic_vector(31 downto 0);
+   -- No clocks detected in port list. Replace <clock> below with 
+   -- appropriate port name 
 
-	type rom_type is array (0 to 31) of std_logic_vector (31 downto 0);
+ 
+BEGIN
+ 
+	-- Instantiate the Unit Under Test (UUT)
+   uut: instructionMemory PORT MAP (
+          address => address,
+          reset => reset,
+          outInstruction => outInstruction
+        );
+
+   -- Clock process definitions
+ 
+
+   -- Stimulus process
+   stim_proc: process
+   begin		
+      -- hold reset state for 100 ns.
+		reset <= '1';
+      wait for 30 ns;
+		reset <= '0';
+		address <= x"00000001";
 		
-	impure function InitRomFromFile (RomFileName : in string) return rom_type is
-		FILE RomFile : text open read_mode is RomFileName;
-		variable RomFileLine : line;
-		variable temp_bv : bit_vector(31 downto 0);
-		variable temp_mem : rom_type;
-		begin
-			for I in rom_type'range loop
-				readline (RomFile, RomFileLine);
-				read(RomFileLine, temp_bv);
-						temp_mem(i) := to_stdlogicvector(temp_bv);
-			end loop;
-		return temp_mem;
-	end function;
-	
-	signal instructions : rom_type := InitRomFromFile("instrucciones.txt");
-	
-begin
---reset,address, instructions)
-	process(reset,address, instructions)--clk)
-	begin
-		--if(rising_edge(clk))then
-			if(reset = '1')then
-				outInstruction <= (others=>'0');
-			else
-				outInstruction <= instructions(conv_integer(address(4 downto 0)));
-			end if;
-		--end if;
-	end process;
-end arqInstructionMemory;
+
+      -- insert stimulus here 
+
+      wait;
+   end process;
+
+END;
