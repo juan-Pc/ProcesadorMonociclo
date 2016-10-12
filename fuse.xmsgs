@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompiler" num="1030" delta="unknown" >"C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/intructionMemory.vhd" Line 47: Cannot open file &apos;<arg fmt="%s" index="1">testJMPL.data</arg>&apos;.
+</msg>
+
+<msg type="error" file="Simulator" num="777" delta="unknown" >Static elaboration of top level VHDL design unit <arg fmt="%s" index="1">instructionmemory</arg> in library <arg fmt="%s" index="2">work</arg> failed
+</msg>
+
 </messages>
 

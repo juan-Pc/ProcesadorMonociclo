@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/ADDER_tb_isim_beh.exe" -prj "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/ADDER_tb_beh.prj" "work.ADDER_tb" 
+-intstyle "ise" -incremental -o "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/instructionMemory_isim_beh.exe" -prj "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/instructionMemory_beh.prj" "work.instructionMemory" 
