@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1196" delta="unknown" >"C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/intructionMemory.vhd" Line 53: Readline called past the end of file <arg fmt="%s" index="1">romfile</arg>
-</msg>
-
 </messages>
 

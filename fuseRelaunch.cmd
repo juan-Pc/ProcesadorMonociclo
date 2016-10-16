@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/IMTB_isim_beh.exe" -prj "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/IMTB_beh.prj" "work.IMTB" 
+-intstyle "ise" -incremental -o "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/unidadControl_isim_beh.exe" -prj "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/unidadControl_beh.prj" "work.unidadControl" 
