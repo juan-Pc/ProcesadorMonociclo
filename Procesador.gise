@@ -167,6 +167,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="instructionMemory_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
     <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/NPC_synthesis.nlf"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="netgen/synthesis/NPC_synthesis.v"/>
@@ -246,19 +247,22 @@
     <transform xil_pn:end_ts="1476688933" xil_pn:in_ck="-1168397004346696220" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3899063118773277026" xil_pn:start_ts="1476688927">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ProcesadorTB_beh.prj"/>
       <outfile xil_pn:name="ProcesadorTB_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1476688933" xil_pn:in_ck="-8299595718045984392" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1584331150005835925" xil_pn:start_ts="1476688933">
+    <transform xil_pn:end_ts="1476690946" xil_pn:in_ck="-8299595718045984392" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1584331150005835925" xil_pn:start_ts="1476690945">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ProcesadorTB_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1461628812" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1461628812">
       <status xil_pn:value="SuccessfullyRun"/>
