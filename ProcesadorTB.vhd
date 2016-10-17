@@ -2,21 +2,21 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   16:47:25 04/25/2016
+-- Create Date:   22:17:28 04/27/2016
 -- Design Name:   
--- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/IMTB.vhd
+-- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/ProcesadorTB.vhd
 -- Project Name:  Procesador
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: instructionMemory
+-- VHDL Test Bench Created by ISE for module: Procesador_Intel_Core_i_7_6700k
 -- 
 -- Dependencies:
 -- 
--- Revision:
+-- Revision:    
 -- Revision 0.01 - File Created
--- Additional Comments:
+-- Additional Comments:   
 --
 -- Notes: 
 -- This testbench has been automatically generated using types std_logic and
@@ -32,62 +32,58 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY IMTB IS
-END IMTB;
+ENTITY ProcesadorTB IS
+END ProcesadorTB;
  
-ARCHITECTURE behavior OF IMTB IS 
+ARCHITECTURE behavior OF ProcesadorTB IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT instructionMemory
+    COMPONENT Procesador_AMD_FULL
     PORT(
-         address : IN  std_logic_vector(31 downto 0);
-         reset : IN  std_logic;
-         outInstruction : OUT  std_logic_vector(31 downto 0)
+         Clock : IN  std_logic;
+         Reset : IN  std_logic;
+         OutProcesador : OUT  std_logic_vector(31 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
-   signal address : std_logic_vector(31 downto 0) := (others => '0');
-   signal reset : std_logic := '0';
+   signal Clock : std_logic := '0';
+   signal Reset : std_logic := '0';
 
  	--Outputs
-   signal outInstruction : std_logic_vector(31 downto 0);
-   -- No clocks detected in port list. Replace <clock> below with 
-   -- appropriate port name 
+   signal OutProcesador : std_logic_vector(31 downto 0);
 
+   -- Clock period definitions
+   constant Clock_period : time := 10 ns;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: instructionMemory PORT MAP (
-          address => address,
-          reset => reset,
-          outInstruction => outInstruction
+   uut: Procesador_AMD_FULL PORT MAP (
+          Clock => Clock,
+          Reset => Reset,
+          OutProcesador => OutProcesador
         );
 
    -- Clock process definitions
+   Clock_process :process
+   begin
+		Clock <= '0';
+		wait for Clock_period/2;
+		Clock <= '1';
+		wait for Clock_period/2;
+   end process;
  
 
    -- Stimulus process
    stim_proc: process
-   begin		
+   begin	
+		Reset <= '1';
       -- hold reset state for 100 ns.
-		reset <= '1';
-      wait for 30 ns;
-		reset <= '0';
-		address <= x"00000000";
-		wait for 30 ns;
-		address <= x"00000001";
-		wait for 30 ns;
-		address <= x"00000002";
-		wait for 30 ns;
-		address <= x"00000003";
-		wait for 30 ns;
-		address <= x"00000004";		
-
-      -- insert stimulus here 
+      wait for 30 ns;	
+		Reset <= '0';	
 
       wait;
    end process;

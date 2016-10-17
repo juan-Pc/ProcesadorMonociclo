@@ -2,15 +2,15 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   16:47:25 04/25/2016
+-- Create Date:   18:46:12 04/25/2016
 -- Design Name:   
--- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/IMTB.vhd
+-- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/MUXTB.vhd
 -- Project Name:  Procesador
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: instructionMemory
+-- VHDL Test Bench Created by ISE for module: MUX
 -- 
 -- Dependencies:
 -- 
@@ -32,60 +32,51 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY IMTB IS
-END IMTB;
+ENTITY MUXTB IS
+END MUXTB;
  
-ARCHITECTURE behavior OF IMTB IS 
+ARCHITECTURE behavior OF MUXTB IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT instructionMemory
+    COMPONENT MUX
     PORT(
-         address : IN  std_logic_vector(31 downto 0);
-         reset : IN  std_logic;
-         outInstruction : OUT  std_logic_vector(31 downto 0)
+         RfToMux : IN  std_logic_vector(31 downto 0);
+         inm : IN  std_logic;
+         seuToMux : IN  std_logic_vector(31 downto 0);
+         MuxToAlu : OUT  std_logic_vector(31 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
-   signal address : std_logic_vector(31 downto 0) := (others => '0');
-   signal reset : std_logic := '0';
+   signal RfToMux : std_logic_vector(31 downto 0) := (others => '0');
+   signal inm : std_logic := '0';
+   signal seuToMux : std_logic_vector(31 downto 0) := (others => '0');
 
  	--Outputs
-   signal outInstruction : std_logic_vector(31 downto 0);
+   signal MuxToAlu : std_logic_vector(31 downto 0);
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
-
+ 
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: instructionMemory PORT MAP (
-          address => address,
-          reset => reset,
-          outInstruction => outInstruction
+   uut: MUX PORT MAP (
+          RfToMux => RfToMux,
+          inm => inm,
+          seuToMux => seuToMux,
+          MuxToAlu => MuxToAlu
         );
 
-   -- Clock process definitions
- 
+  
 
    -- Stimulus process
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-		reset <= '1';
-      wait for 30 ns;
-		reset <= '0';
-		address <= x"00000000";
-		wait for 30 ns;
-		address <= x"00000001";
-		wait for 30 ns;
-		address <= x"00000002";
-		wait for 30 ns;
-		address <= x"00000003";
-		wait for 30 ns;
-		address <= x"00000004";		
+      wait for 100 ns;	
 
       -- insert stimulus here 
 

@@ -1,20 +1,40 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/unidadControl_isim_beh.exe -prj C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/unidadControl_beh.prj work.unidadControl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Juan/Documents/procesor/Procesador32bits/ProcesadorTB_isim_beh.exe -prj C:/Users/Juan/Documents/procesor/Procesador32bits/ProcesadorTB_beh.prj work.ProcesadorTB 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/UnidadControl.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/UC.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/Sumador.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/SEU.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/RF.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/PC.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/NPC.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/MUX.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/instructionMemory.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/Procesador_AMD_FULL.vhd" into library work
+Parsing VHDL file "C:/Users/Juan/Documents/procesor/Procesador32bits/ProcesadorTB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
-Compiling package numeric_std
-Compiling architecture behavioral of entity unidadcontrol
+Compiling package textio
+Compiling architecture behavioral of entity Sumador [sumador_default]
+Compiling architecture behavioral of entity NPC [npc_default]
+Compiling architecture behavioral of entity PC [pc_default]
+Compiling architecture arqinstructionmemory of entity instructionMemory [instructionmemory_default]
+Compiling architecture behavioral of entity UC [uc_default]
+Compiling architecture behavioral of entity RF [rf_default]
+Compiling architecture behavioral of entity MUX [mux_default]
+Compiling architecture behavioral of entity SEU [seu_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity Procesador_AMD_FULL [procesador_amd_full_default]
+Compiling architecture behavior of entity procesadortb
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 6 VHDL Units
-Built simulation executable C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/unidadControl_isim_beh.exe
-Fuse Memory Usage: 36596 KB
-Fuse CPU Usage: 952 ms
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 26 VHDL Units
+Built simulation executable C:/Users/Juan/Documents/procesor/Procesador32bits/ProcesadorTB_isim_beh.exe
+Fuse Memory Usage: 33948 KB
+Fuse CPU Usage: 843 ms
