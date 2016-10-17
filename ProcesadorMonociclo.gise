@@ -124,6 +124,9 @@
     <transform xil_pn:end_ts="1476680296" xil_pn:in_ck="-8618760476622675229" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1476680296">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ADDER.vhd"/>
       <outfile xil_pn:name="ADDER_Test.vhd"/>
       <outfile xil_pn:name="IMTB.vhd"/>
@@ -151,6 +154,7 @@
     <transform xil_pn:end_ts="1476680300" xil_pn:in_ck="-8618760476622675229" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1476680300">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="ADDER.vhd"/>
       <outfile xil_pn:name="ADDER_Test.vhd"/>
       <outfile xil_pn:name="IMTB.vhd"/>
@@ -166,6 +170,8 @@
     <transform xil_pn:end_ts="1476680426" xil_pn:in_ck="-8618760476622675229" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7468879298573755961" xil_pn:start_ts="1476680419">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -178,6 +184,8 @@
     <transform xil_pn:end_ts="1476680426" xil_pn:in_ck="3036694809883853453" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8514194559357152404" xil_pn:start_ts="1476680426">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
