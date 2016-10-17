@@ -75,9 +75,9 @@ BEGIN
    begin		
       -- hold reset state for 100 ns.
 		reset <= '1';
-      wait for 30 ns;
+      wait for 30 ns;   
 		reset <= '0';
-		address <= x"00000001";
+		address <= x"00000000";
 		
 
       -- insert stimulus here 

@@ -13,7 +13,8 @@ Compiling package std_logic_unsigned
 Compiling package numeric_std
 Compiling architecture behavioral of entity unidadcontrol
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 6 VHDL Units
 Built simulation executable C:/Users/Juan/Desktop/MonocicloProcesador/ProcesadorMonociclo/unidadControl_isim_beh.exe
-Fuse Memory Usage: 36512 KB
-Fuse CPU Usage: 921 ms
+Fuse Memory Usage: 36596 KB
+Fuse CPU Usage: 952 ms
