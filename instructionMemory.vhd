@@ -48,7 +48,7 @@ architecture arqInstructionMemory of instructionMemory is
 		return temp_mem;
 	end function;
 	
-	signal instructions : rom_type := InitRomFromFile("instruccione.txt");
+	signal instructions : rom_type := InitRomFromFile("instrucciones1.txt");
 	
 begin
 --reset,address, instructions)
