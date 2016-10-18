@@ -184,7 +184,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1476757598" xil_pn:in_ck="-1168397004346696220" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1476757598">
+    <transform xil_pn:end_ts="1476832995" xil_pn:in_ck="-1168397004346696220" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1476832995">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -220,7 +220,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1476757620" xil_pn:in_ck="-1168397004346696220" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1476757620">
+    <transform xil_pn:end_ts="1476833001" xil_pn:in_ck="-1168397004346696220" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1476833001">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -244,7 +244,7 @@
       <outfile xil_pn:name="UCTB.vhd"/>
       <outfile xil_pn:name="instructionMemory.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1476757629" xil_pn:in_ck="-1168397004346696220" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3899063118773277026" xil_pn:start_ts="1476757620">
+    <transform xil_pn:end_ts="1476833008" xil_pn:in_ck="-1168397004346696220" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3899063118773277026" xil_pn:start_ts="1476833001">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ProcesadorTB_beh.prj"/>
@@ -254,7 +254,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1476757630" xil_pn:in_ck="-8299595718045984392" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1584331150005835925" xil_pn:start_ts="1476757629">
+    <transform xil_pn:end_ts="1476833009" xil_pn:in_ck="-8299595718045984392" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1584331150005835925" xil_pn:start_ts="1476833008">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ProcesadorTB_isim_beh.wdb"/>
